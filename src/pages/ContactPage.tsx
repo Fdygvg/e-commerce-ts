@@ -1,7 +1,7 @@
 import { useState } from "react";
-import type  FormEvent from 'react';
-import styles from "../styles/ContactPage.module.css";
 
+import styles from "../styles/ContactPage.module.css";
+import type { FormEvent } from "react";
 interface ContactFormData {
   name: string;
   email: string;
