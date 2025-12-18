@@ -1,0 +1,58 @@
+/* About.module.css */
+.about {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Hero section */
+.hero {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--accent-color));
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Content */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.block p {
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.block ul {
+  padding-left: 1.25rem;
+}
+
+.block li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}

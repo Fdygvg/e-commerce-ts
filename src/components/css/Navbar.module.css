@@ -1,0 +1,249 @@
+/* Navbar.module.css */
+.navbar {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 0 var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: var(--accent-color);
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.navLink {
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.navLink:hover {
+  background-color: var(--bg-secondary);
+  color: var(--accent-color);
+}
+
+.navLink.active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Right Section */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+/* Cart Button */
+.cartButton {
+  background-color: var(--accent-color);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.cartButton:hover {
+  background-color: var(--accent-color);
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  color: var(--text-primary);
+}
+
+.themeToggle:hover {
+  background-color: var(--bg-secondary);
+}
+
+.cartBadge {
+  background-color: var(--danger-color);
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+/* Hamburger Menu (Hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.line {
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+.hamburger:hover .line {
+  background-color: var(--accent-color);
+}
+
+.line1 {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.line2 {
+  opacity: 0;
+}
+
+.line3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  padding: 80px 30px 30px;
+  transition: right 0.4s ease-in-out;
+  z-index: 999;
+  box-shadow: var(--shadow-xl);
+}
+
+.mobileMenu.open {
+  right: 0;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.mobileLink {
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: var(--spacing-md) 0;
+  font-size: 18px;
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.3s;
+}
+
+.mobileLink:hover,
+.mobileLink.active {
+  color: var(--accent-color);
+}
+
+.mobileCartLink {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: 500;
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 28px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.closeButton:hover {
+  color: var(--accent-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .cartButton span {
+    display: none;
+  }
+  
+  .cartButton {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .cartBadge {
+    top: -5px;
+    right: -5px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none;
+  }
+}
